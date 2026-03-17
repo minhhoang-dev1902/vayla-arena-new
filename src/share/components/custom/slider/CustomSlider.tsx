@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import useEmblaCarousel from "embla-carousel-react"
 import type { EmblaCarouselType } from "embla-carousel"
-import { DotButton } from "./Buttons"
+import { DotButton } from "./ButtonsSlider"
 import "./slider.css"
 
 export type SliderSlide = {

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import MainLayout from "./(main)/layout";
-import { ViewAreaProvider } from "@/components/providers/view-area-provider";
 
 const geistSans = Geist({
 	subsets: ["latin"],
@@ -25,11 +23,9 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className="bg-[black]">
+		<html lang="en">
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-[black]`}>
-				<ViewAreaProvider className="relative mx-auto min-h-screen w-full max-w-xl overflow-hidden bg-[white]">
-					<MainLayout>{children}</MainLayout>
-				</ViewAreaProvider>
+				{children}
 			</body>
 		</html>
 	);
